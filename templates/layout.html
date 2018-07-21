@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="refresh" content="5">
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+        <a class="navbar-brand" href="#">David's CS50 GoodReads App</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <input type="text" class="form-control" placeholder="Search a book, author or ISBN" style="width:220px;">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <p class="navbar-text">Join us or login to leave reviews</p>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+            <ul id="login-dp" class="dropdown-menu">
+              <li>
+                <div class="row">
+                  <div class="col-md-12">
+                    Login <br>
+
+                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                      <div class="form-group">
+                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="sr-only" for="exampleInputPassword2">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                        <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                   <input type="checkbox"> keep me logged-in
+                   </label>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="bottom text-center">
+                    New here ? <a href="#"><b>Join Us</b></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        {% block heaeder %} {% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
