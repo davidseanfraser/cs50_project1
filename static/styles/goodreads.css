@@ -1,0 +1,18 @@
+#login-dp {
+   width: 500px;
+   padding: 30px;
+
+}
+
+#index_white {
+  color:white;
+}
+
+.jumbotron-background {
+
+
+  background-image: url("background.jpg");
+  background-size: 100%;
+  background-repeat:no-repeat;
+  overflow:hidden;
+}
