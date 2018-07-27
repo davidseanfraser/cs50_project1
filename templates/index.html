@@ -1,12 +1,24 @@
-{% extends "layout.html" %}
+{% extends "layout_login.html" %}
+
+{% block title %}
+  Home
+{% endblock %}
 
 
-{% block title %}Home{% endblock %}
+  {% block header %}
+Log in or register to leave reviews
+  {% endblock %}
 
 {% block body %}
-    <ul>
-      {% for user in users %}
-        <li><a href="{{ user.url }}">{{ user.username }}</a></li>
-      {% endfor %}
-    </ul>
+<div class="jumbotron jumbotron-background">
+  <div class="container text-center">
+    <div class="row" id="index_white">
+      <h2 class = "text-center">{{ message }}</h2>
+      <h1 class="text-center card-title h2-responsive mt-2">CS50's Goodreads App</1h>
+    <p class="mb-4 font-bold"> Search and review Goodreads books </p>
+  </div><br>
+        <button class="btn" type="submit" onclick="location.href = '/login';">Login </button>
+        <button class="btn btn-indigo btn-rounded">Download <i class="fa fa-download ml-1"></i></button>
+  </div>
+</div>
 {% endblock %}

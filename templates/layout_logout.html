@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block login %}
+  <li>
+  <a href="/logout"><button class="btn btn-outline-secondary"> Logout </button></a>
+</li>
+{% endblock %}
+{% block body %}
+<div class="container">
+<div class="jumbotron">
+  {% block body_logout %} {% endblock %}</div> </div>{% endblock %}

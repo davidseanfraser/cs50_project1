@@ -1,0 +1,38 @@
+{% extends "layout_logout.html" %}
+
+{% block body_logout %}
+  <h2> About: </h2> <br>
+  Title: {{ book.title }} <br>
+  Author: {{ book.author }} <br>
+  Publication Year: {{ book.year }} <br>
+  ISBN: {{ book.isbn }} <br>
+  Good Reads Reviews: {{ goodread_reviews }}<br>
+  Goodreads Average Score: {{ goodread_avg_score }}<br>
+  <br>
+  <h2>Reviews: </h2><br>
+    {% for review in reviews %}<br>
+    Reviewer:  {{ review.user_id }}<br>
+    Comment: {{ review.review }} <br>
+    Score:  {{ review.score }} <br>
+    {% endfor %}
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  Leave a Review:
+  <form action="/submit_review" method="post">
+  <div class="form-group">
+  <input type = hidden name="isbn_input" value = {{ book.isbn }}></input>
+  <label class="radio-inline"><input type="radio" name="optradio" value=1> 1</label>
+  <label class="radio-inline"><input type="radio" name="optradio" value=2> 2</label>
+  <label class="radio-inline"><input type="radio" name="optradio" value=3> 3</label>
+  <label class="radio-inline"><input type="radio" name="optradio" value=4> 4</label>
+  <label class="radio-inline"><input type="radio" name="optradio" value=5> 5</label>
+    <br>
+  <label for="comment">Comment:</label>
+  <textarea class="form-control" rows="5" name="comment"></textarea>
+  <button type="submit" class="btn btn-outline-secondary">Submit</button>
+  </div>
+</form>
+{% endblock %}
